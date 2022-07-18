@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quotes
+{% endblock %}
+{% block main %}
+    <form action="/quote" class="quoted-form" method="post">
+        <div class="mb-3">
+            <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="username" name="symbol" placeholder="Stock Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Quote</button>
+    </form>
+    {% for quote in quotes %}
+        <h3>
+            {{ quote["name"] }}({{ quote["symbol"] }}): {{ quote["price"] }}
+        </h3>
+    {% endfor %}
+{% endblock %}

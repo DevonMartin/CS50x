@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function correct() {
+                document.getElementById('p1').innerHTML = "Correct!";
+                document.getElementById("wrong1").style.cssText = 'background:#d9edff';
+                document.getElementById("wrong2").style.cssText = 'background:#d9edff';
+            }
+
+            function incorrect1() {
+                document.getElementById('p1').innerHTML = "Incorrect";
+                document.getElementById("wrong2").style.cssText = 'background:#d9edff';
+                document.getElementById("right").style.cssText = 'background:#d9edff';
+            }
+
+            function incorrect2() {
+                document.getElementById('p1').innerHTML = "Incorrect";
+                document.getElementById("wrong1").style.cssText = 'background:#d9edff';
+                document.getElementById("right").style.cssText = 'background:#d9edff';
+            }
+
+            function checkAnswer() {
+                const userInput = document.getElementById('answer').value;
+                if (userInput === "Roy") {
+                    document.getElementById('answer').style.cssText = 'background:green';
+                    document.getElementById('p2').innerHTML = "Correct!";
+
+                } else {
+                    document.getElementById('answer').style.cssText = 'background:red';
+                    document.getElementById('p2').innerHTML = "Incorrect";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which of these pranks did Jim pull on Dwight in The Office?</h3>
+                <p id="p1"></p>
+                <button type="button"
+                        id="wrong1"
+                        onClick="incorrect1()
+                                 style.cssText = 'background:red;';">Mouse in Coffee Cup
+                </button>
+                <button type="button"
+                        id="wrong2"
+                        onClick="incorrect2()
+                                 style.cssText = 'background:red;';">Shoe in Pudding
+                </button>
+                <button type="button"
+                        id="right"
+                        onClick="correct()
+                                 style.cssText = 'background:green;';">Stapler in Jello
+                </button>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the name of Pam's fiancé in season 1 of The Office?</h3>
+                <p id="p2"></p>
+                <label for="answer">Answer:</label>
+                <input id="answer" name="answer" type="text"/>
+                <button onClick="checkAnswer()"
+                        type="button">Check Answer
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

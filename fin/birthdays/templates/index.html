@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <div class="wrapper">
+                    <div class="typing">Add a Birthday</div>
+                </div>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action="/" method="post">
+                    <input name="name" placeholder="Name" type="text">
+                    <input name="month" placeholder="Month" type="number">
+                    <input name="day" placeholder="Day" type="number">
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <form action="/" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Birthday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TODO: Loop through the database entries to display them in this table -->
+                            {% for entry in entries %}
+                                <tr>
+                                    <td>
+                                        <input name="remove" value="{{ entry['id'] }}" type="radio">
+                                        {{ entry["name"] }}
+                                    </td>
+                                    <td>{{ entry["month"] }}/{{ entry["day"] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <input value="Remove Entry" type="submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

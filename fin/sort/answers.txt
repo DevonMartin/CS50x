@@ -1,0 +1,17 @@
+sort1 uses: Bubble Sort
+
+How do you know?: The sorting is nearly instant when the words are sorted. Bubble sort is the only sorting
+method that checks if any swaps must occur through the entire list, and, if not, ends early.
+
+sort2 uses: Merge Sort
+
+How do you know?: The sorting is by far the quickest, except losing to sort1 when the numbers are in order,
+and it is consistent no matter the order. Merge sort always breaks the order down into pairs, compares
+each pair, and then combines pairs. This causes the sorting to be consistently the same speed, as it always
+does just as many checks.
+
+sort3 uses: Selection Sort
+
+How do you know?: The sorting is consistent, but slower than sort2. Selection sort must check for the smallest
+number through each iteration, and never checks for completeness through each iteration. It only compares
+that to the first number it knows is sorted. Therefore, it is consistent, but it is slower than merge sorting.
