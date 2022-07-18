@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" content="initial-scale=1, width=device-width" name="viewport">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" href="pictures/logo.png">
+        <title>Contact Devon</title>
+    </head>
+    <body>
+        <header-component></header-component>
+
+        <!--Contact Box-->
+        <div class="contact-form">
+            <h2 class="h1-responsive font-weight-bold my-4">
+                Contact Me
+            </h2>
+            <p class="contact-p">
+                Send me an email so we can connect. Let's figure out how I can bring your project dream to life.
+            </p>
+
+            <!--Contact Form-->
+            <form name="contact-form" action="mail.php" method="POST">
+                <div>
+                    <label class="input">
+                        <span>Your name</span>
+                        <input type="text" class="form-control contact-input" id="name" name="name">
+                    </label>
+                    <label class="input">
+                        <span>Your email</span>
+                        <input type="text" class="form-control contact-input" id="email" name="email">
+                    </label>
+                    <label class="input">
+                        <span>Subject</span>
+                        <input type="text" class="form-control contact-input" id="subject" name="subject">
+                    </label>
+                    <label class="input">
+                        <span>Your message</span>
+                        <textarea type="text" id="message" name="message" rows="2" class="form-control contact-input"></textarea>
+                    </label>
+                </div>
+            </form>
+            <a class="btn btn-primary contact-button" onclick="validateForm();">Send</a>
+            <div class="status contact-error" id="status"></div>
+            <!--Contact Form-->
+
+            <!--Contact Info-->
+            <div class="text-center">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <img src="pictures/maps.png" alt="Map icon" width="50" height="50">
+                        <p>Jennings, FL 32053, USA</p>
+                    </li>
+    
+                    <li>
+                        <img src="pictures/apple-phone.png" alt="Phone icon" width="50" height="50">
+                        <p>+1-941-456-8817</p>
+                    </li>
+    
+                    <li>
+                        <img src="pictures/apple-mail.png" alt="Mail icon" width="50" height="50">
+                        <p>devon.martin.re@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Contact Info-->
+
+        </div>
+        <!--Contact Box-->
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="components/header.js" type="text/javascript" defer></script>
+        <script src="components/contact.js" type="text/javascript" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </body>
+</html>
